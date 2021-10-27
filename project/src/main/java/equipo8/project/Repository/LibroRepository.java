@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface LibroRepository extends CrudRepository<Libro, String>{
     List<Libro> findAll();
+    Libro save(Libro libro);
 }
