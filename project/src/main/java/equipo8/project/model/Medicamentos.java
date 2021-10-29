@@ -3,8 +3,8 @@ package equipo8.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="editoriales")
-public class Editorial {
+@Table(name="Medicamentos")
+public class Medicamentos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,11 +13,11 @@ public class Editorial {
     @Column(name = "nombre")
     private String nombre;
 
-    public Editorial(){
+    public Medicamentos(){
 
     }
 
-    public Editorial(int id, String nombre){
+    public Medicamentos(int id, String nombre){
         this.id=id;
         this.nombre=nombre;
     }
