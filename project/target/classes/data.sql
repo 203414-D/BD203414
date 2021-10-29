@@ -34,11 +34,11 @@ CREATE TABLE autores(
   INSERT INTO autores(nombre) VALUES ('Mario Molina');
   INSERT INTO autores(nombre) VALUES ('Paenza');
 
-CREATE TABLE editoriales(
+CREATE TABLE editorialess(
   id IDENTITY NOT NULL PRIMARY KEY,
-  nombre VARCHAR(40)
+  nombre VARCHAR(40) NOT NULL
  );
- INSERT INTO editoriales(nombre) VALUES('Planeta');
+  INSERT INTO editoriales(nombre) VALUES('Planeta');
   INSERT INTO editoriales(nombre) VALUES('Emece');
   INSERT INTO editoriales(nombre) VALUES('Siglo XXI');
   INSERT INTO editoriales(nombre) VALUES('Plaza');
