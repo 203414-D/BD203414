@@ -22,6 +22,7 @@ public class Autor {
         this.nombre=nombre;
     }
 
+
     public int getId() {
         return id;
     }
@@ -30,12 +31,11 @@ public class Autor {
         this.id = id;
     }
 
-    public String getTitulo() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setTitulo(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
 }
