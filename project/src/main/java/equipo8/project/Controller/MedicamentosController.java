@@ -16,11 +16,11 @@ public class MedicamentosController {
     @Autowired
     MedicamentosRepository medicamentosRepository;
 
-    @GetMapping(value = "/listaEditorial")
+    @GetMapping(value = "/listaMedicamentos")
     public List<Medicamentos> getListMedicamentos(){
         return medicamentosRepository.findAll();
     }
-    @PostMapping(value = "/editorial/new")
+    @PostMapping(value = "/Medicamentos/new")
     public Medicamentos addMedicamentos(@RequestBody Medicamentos medicamentos){
         return medicamentosRepository.save(medicamentos);
     }

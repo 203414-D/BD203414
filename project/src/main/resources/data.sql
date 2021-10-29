@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS mascotas;
-DROP TABLE IF EXISTS autores;
+DROP TABLE IF EXISTS duenos;
 DROP TABLE IF EXISTS medicamentos;
 
 CREATE TABLE mascotas(

@@ -3,7 +3,7 @@ package equipo8.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="duenos")
+@Table(name = "duenos")
 public class Dueno {
 
     @Id
@@ -12,6 +12,7 @@ public class Dueno {
 
     @Column(name = "nombre")
     private String nombre;
+    @Column(name = "telefono")
     private String telefono;
 
     public Dueno(){

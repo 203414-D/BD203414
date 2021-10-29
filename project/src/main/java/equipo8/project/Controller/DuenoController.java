@@ -20,7 +20,7 @@ public class DuenoController {
     public List<Dueno> getListDueno(){
         return duenoRepository.findAll();
     }
-    @PostMapping(value = "/autor/new")
+    @PostMapping(value = "/dueno/new")
     public Dueno addDueno(@RequestBody Dueno dueno){
         return duenoRepository.save(dueno);
     }
