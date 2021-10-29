@@ -1,44 +1,47 @@
-DROP TABLE IF EXISTS libros;
+DROP TABLE IF EXISTS mascotas;
 DROP TABLE IF EXISTS autores;
-DROP TABLE IF EXISTS editorieales;
+DROP TABLE IF EXISTS medicamentos;
 
-CREATE TABLE libros(
+CREATE TABLE mascotas(
   id IDENTITY NOT NULL PRIMARY KEY,
-  titulo VARCHAR(50) NOT NULL,
-  idautor INT,
-  ideditorial INT ,
-  precio DOUBLE
+  nombre VARCHAR(50) NOT NULL,
+  tipo VARCHAR(50) NOT NULL,
+  fechaingreso DATE,
+  razon VARCHAR(50) NOT NULL
  );
- INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('El Alquimista',2,2,20);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Martin Fierro',3,1,30);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Aprenda Matematicas',4,3,50);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Uno',1,1,15);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Java en 10 minutos',2,3,45);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Historia Moderna de Mexico',1,4,15);
-  INSERT INTO libros(titulo,idautor,ideditorial,precio)
-    VALUES('Historias de terror',5,4,50);
+ INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
+    VALUES('puchi','perro','2021-12-12','vacunacion');
+  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
+     VALUES('bigotes','conejo','2021-03-01','chequeo');
+  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
+         VALUES('nala','perro','2021-05-23','moquillo');
+  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
+             VALUES('sombra','gato','2021-02-10','vacunacion');
+  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
+             VALUES('pirata','gato','2021-04-10','chequeo');
 
-CREATE TABLE autores(
+CREATE TABLE dueños(
   id IDENTITY NOT NULL PRIMARY KEY,
-  nombre VARCHAR(50) NOT NULL
+  nombre VARCHAR(50) NOT NULL,
+  telefono VARCHAR(50) NOT NULL
  );
- INSERT INTO autores(nombre) VALUES ('Richard Bach');
-  INSERT INTO autores(nombre) VALUES ('Borges');
-  INSERT INTO autores(nombre) VALUES ('Jose Hernandez');
-  INSERT INTO autores(nombre) VALUES ('Mario Molina');
-  INSERT INTO autores(nombre) VALUES ('Paenza');
+ INSERT INTO dueños(nombre,telefono)
+    VALUES ('Richard Bach','9613527858');
+  INSERT INTO deuños(nombre,telefono)
+    VALUES ('Borges','9651234589');
+  INSERT INTO dueños(nombre,telefono)
+    VALUES ('Jose Hernandez','9684551234');
+  INSERT INTO dueños(nombre,telefono)
+    VALUES ('Mario Molina','9662657898');
+  INSERT INTO dueños(nombre,telefono)
+    VALUES ('Paenza','9613524555');
 
-CREATE TABLE editorialess(
+CREATE TABLE medicamentos(
   id IDENTITY NOT NULL PRIMARY KEY,
+  codigo INT
   nombre VARCHAR(40) NOT NULL
  );
-  INSERT INTO editoriales(nombre) VALUES('Planeta');
-  INSERT INTO editoriales(nombre) VALUES('Emece');
-  INSERT INTO editoriales(nombre) VALUES('Siglo XXI');
-  INSERT INTO editoriales(nombre) VALUES('Plaza');
+  INSERT INTO medicamentos(codigo,nombre) VALUES(845,'vacuna para la rabia');
+  INSERT INTO medicamentos(codigo,nombre) VALUES(1023.'vitaminas');
+  INSERT INTO medicamentos(codigo,nombre) VALUES(4455,'jabon anti-pulgas');
+  INSERT INTO medicamentos(codigo,nombre) VALUES(289345,'talco anti-garrapatas');
