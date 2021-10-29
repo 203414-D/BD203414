@@ -3,8 +3,8 @@ package equipo8.project.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="autores")
-public class Autor {
+@Table(name="duenos")
+public class Dueno {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,14 +12,16 @@ public class Autor {
 
     @Column(name = "nombre")
     private String nombre;
+    private int telefono;
 
-    public Autor(){
+    public Dueno(){
 
     }
 
-    public Autor(int id, String nombre){
+    public Dueno(int id, String nombre, int telefono){
         this.id=id;
         this.nombre=nombre;
+        this.telefono=telefono;
     }
 
 
@@ -37,5 +39,13 @@ public class Autor {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int gettelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 }

@@ -1,7 +1,7 @@
 package equipo8.project.Controller;
 
-import equipo8.project.Repository.AutorRepository;
-import equipo8.project.model.Autor;
+import equipo8.project.Repository.DuenoRepository;
+import equipo8.project.model.Dueno;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class AutorController {
+public class DuenoController {
 
     @Autowired
-    AutorRepository autorRepository;
+    DuenoRepository duenoRepository;
 
-    @GetMapping(value = "/listaAutor")
-    public List<Autor> getListAutor(){
-        return autorRepository.findAll();
+    @GetMapping(value = "/listaDueno")
+    public List<Dueno> getListDueno(){
+        return duenoRepository.findAll();
     }
     @PostMapping(value = "/autor/new")
-    public Autor addAutor(@RequestBody Autor autor){
-        return autorRepository.save(autor);
+    public Dueno addDueno(@RequestBody Dueno dueno){
+        return duenoRepository.save(dueno);
     }
 
 
