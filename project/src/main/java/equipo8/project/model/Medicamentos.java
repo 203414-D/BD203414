@@ -8,7 +8,7 @@ public class Medicamentos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int codigo;
 
     @Column(name = "nombre")
     private String nombre;
@@ -17,18 +17,18 @@ public class Medicamentos {
 
     }
 
-    public Medicamentos(int id, String nombre){
-        this.id=id;
+    public Medicamentos(int codigo, String nombre){
+        this.codigo=codigo;
         this.nombre=nombre;
     }
 
 
-    public int getId() {
-        return id;
+    public int getcodigo() {
+        return codigo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setcodigo(int id) {
+        this.codigo = id;
     }
 
     public String getNombre() {
