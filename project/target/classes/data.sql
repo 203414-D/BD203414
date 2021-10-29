@@ -26,7 +26,7 @@ CREATE TABLE libros(
 
 CREATE TABLE autores(
   id IDENTITY NOT NULL PRIMARY KEY,
-  nombre VARCHAR(40)
+  nombre VARCHAR(50) NOT NULL
  );
  INSERT INTO autores(nombre) VALUES ('Richard Bach');
   INSERT INTO autores(nombre) VALUES ('Borges');

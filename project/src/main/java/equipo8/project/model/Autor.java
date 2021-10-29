@@ -13,15 +13,14 @@ public class Autor {
     @Column(name = "nombre")
     private String nombre;
 
-    public Autor(int id, String nombre){
-        this.id=id;
-        this.nombre=nombre;
-    }
-
     public Autor(){
 
     }
 
+    public Autor(int id, String nombre){
+        this.id=id;
+        this.nombre=nombre;
+    }
 
     public int getId() {
         return id;
