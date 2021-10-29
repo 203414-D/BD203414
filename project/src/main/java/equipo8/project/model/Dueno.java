@@ -12,13 +12,13 @@ public class Dueno {
 
     @Column(name = "nombre")
     private String nombre;
-    private int telefono;
+    private String telefono;
 
     public Dueno(){
 
     }
 
-    public Dueno(int id, String nombre, int telefono){
+    public Dueno(int id, String nombre, String telefono){
         this.id=id;
         this.nombre=nombre;
         this.telefono=telefono;
@@ -41,11 +41,11 @@ public class Dueno {
         this.nombre = nombre;
     }
 
-    public int gettelefono() {
+    public String gettelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 }
