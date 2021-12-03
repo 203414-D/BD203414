@@ -1,7 +1,7 @@
 package equipo8.project.model;
 
 import javax.persistence.*;
-import java.util.Date;
+
 
 @Entity
 @Table(name = "mascotas")
@@ -9,68 +9,56 @@ public class Mascota {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+  private int idmascota;
 
-  @Column(name = "nombre")
-  private String nombre;
+  @Column(name = "nombremascota")
+  private String nombremascota;
 
-  @Column(name = "tipo")
-  private String tipo;
+  @Column(name = "tipomascota")
+  private String tipomascota;
 
-  @Column(name = "fechaingreso")
-  private Date fechaingreso;
-
-  @Column(name = "razon")
-  private String razon;
+  @Column(name = "medicamentomas")
+  private String medicamentomas;
 
   public Mascota(){
 
   }
-  public Mascota(int id, String nombre, String tipo, Date fechaingreso, String razon){
-    this.id=id;
-    this.nombre=nombre;
-    this.tipo=tipo;
-    this.fechaingreso=fechaingreso;
-    this.razon=razon;
+  public Mascota(int idmascota, String nombremascota, String tipomascota, String medicamentomas){
+    this.idmascota=idmascota;
+    this.nombremascota=nombremascota;
+    this.tipomascota=tipomascota;
+    this.medicamentomas=medicamentomas;
   }
 
-  public int getId() {
-    return id;
+  public int getIdmascota() {
+    return idmascota;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public void setIdmascota(int idmascota) {
+    this.idmascota = idmascota;
   }
 
-  public String getNombre() {
-    return nombre;
+  public String getNombremascota() {
+    return nombremascota;
   }
 
-  public void setNombre(String nombre) {
-    this.nombre = nombre;
+  public void setNombremascota(String nombremascota) {
+    this.nombremascota = nombremascota;
   }
 
-  public String getTipo() {
-    return tipo;
+  public String getTipomascota() {
+    return tipomascota;
   }
 
-  public void setTipo(String tipo) {
-    this.tipo = tipo;
+  public void setTipomascota(String tipomascota) {
+    this.tipomascota = tipomascota;
   }
 
-  public Date getFechaingreso() {
-    return fechaingreso;
+  public String getMedicamentomas() {
+    return medicamentomas;
   }
 
-  public void setFechaingreso(Date fechaingreso) {
-    this.fechaingreso = fechaingreso;
-  }
-
-  public String getRazon() {
-    return razon;
-  }
-
-  public void setRazon(String razon) {
-    this.razon = razon;
+  public void setRazon(String medicamentomas) {
+    this.medicamentomas = medicamentomas;
   }
 }

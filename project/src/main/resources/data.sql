@@ -3,22 +3,21 @@ DROP TABLE IF EXISTS duenos;
 DROP TABLE IF EXISTS medicamentos;
 
 CREATE TABLE mascotas(
-  id IDENTITY NOT NULL PRIMARY KEY,
-  nombre VARCHAR(50) NOT NULL,
-  tipo VARCHAR(50) NOT NULL,
-  fechaingreso DATE,
-  razon VARCHAR(50) NOT NULL
+  idmascota IDENTITY NOT NULL PRIMARY KEY,
+  nombremascota VARCHAR(50) NOT NULL,
+  tipomascota VARCHAR(50) NOT NULL,
+  medicamentomas VARCHAR(50) NOT NULL
  );
- INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
-    VALUES('puchi','perro','2021-12-12','vacunacion');
-  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
-     VALUES('bigotes','conejo','2021-03-01','chequeo');
-  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
-         VALUES('nala','perro','2021-05-23','moquillo');
-  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
-             VALUES('sombra','gato','2021-02-10','vacunacion');
-  INSERT INTO mascotas(nombre,tipo,fechaingreso,razon)
-             VALUES('pirata','gato','2021-04-10','chequeo');
+ INSERT INTO mascotas(nombremascota,tipomascota,medicamentomas)
+    VALUES('puchi','perro','royal canin');
+  INSERT INTO mascotas(nombremascota,tipomascota,medicamentomas)
+     VALUES('bigotes','conejo','Naxpet');
+  INSERT INTO mascotas(nombremascota,tipomascota,medicamentomas)
+         VALUES('nala','perro','nipramida');
+  INSERT INTO mascotas(nombremascota,tipomascota,medicamentomas)
+             VALUES('sombra','gato','nipramida');
+  INSERT INTO mascotas(nombremascota,tipomascota,medicamentomas)
+             VALUES('pirata','gato','nexgard');
 
 CREATE TABLE duenos(
   id IDENTITY NOT NULL PRIMARY KEY,
