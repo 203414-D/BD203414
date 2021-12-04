@@ -21,14 +21,18 @@ public class Mascota {
     @Column(name = "medicamentomas")
     private String medicamentomas;
 
+    @Column(name="iddueno")
+    private int iddueno;
+
     public Mascota(){
 
     }
-    public Mascota(int idmascota, String nombremascota, String tipomascota, String medicamentomas){
+    public Mascota(int idmascota, String nombremascota, String tipomascota, String medicamentomas, int iddueno){
         this.idmascota=idmascota;
         this.nombremascota=nombremascota;
         this.tipomascota=tipomascota;
         this.medicamentomas=medicamentomas;
+        this.iddueno=iddueno;
     }
 
     public int getIdmascota() {
@@ -62,4 +66,14 @@ public class Mascota {
     public void setMedicamentomas(String medicamentomas) {
         this.medicamentomas = medicamentomas;
     }
+
+    public void setIddueno(int iddueno) {
+        this.iddueno = iddueno;
+    }
+
+    public int getIddueno() {
+        return iddueno;
+    }
+
+
 }

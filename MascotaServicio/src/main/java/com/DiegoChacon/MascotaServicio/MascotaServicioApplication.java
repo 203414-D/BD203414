@@ -11,6 +11,9 @@ public class MascotaServicioApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MascotaServicioApplication.class, args);
 	}
-
-
+	@Bean
+	public RestTemplate getrestemplate(){
+		return new RestTemplate();
+	}
 }
+

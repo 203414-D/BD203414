@@ -9,8 +9,12 @@ import java.util.List;
 
 public interface MascotaRepository extends CrudRepository<Mascota, String> {
     List<Mascota> findAll();
+
     Mascota save(Mascota mascota);
+
     Mascota findByidmascota(int idmascota);
+
+
 
     @Query(
             value = "SELECT * FROM mascotas WHERE medicamentomas =:medicamentomas",
@@ -18,6 +22,11 @@ public interface MascotaRepository extends CrudRepository<Mascota, String> {
     )
     List<Mascota> findBymedicamentomas(@Param("medicamentomas") String medicamentomas);
 
+    @Query(
+            value = "SELECT * FROM mascotas WHERE iddueno=:iddueno",
+            nativeQuery = true
+    )
+    List<Mascota> findByiddueno(@Param("iddueno")int iddueno);
 
 
 

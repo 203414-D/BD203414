@@ -14,35 +14,36 @@ public class Dueno {
     private String nommbreduenos;
     @Column(name = "telefono")
     private String telefono;
-    @Column(name = "idmascota")
-    private int idmascota;
+
 
     public Dueno(){
 
     }
 
-    public Dueno(int idduenos, String nombreduenos, String telefono, int idmascota){
+    public Dueno(int idduenos, String nombreduenos, String telefono){
         this.idduenos=idduenos;
         this.nommbreduenos=nombreduenos;
         this.telefono=telefono;
-        this.idmascota=idmascota;
+
     }
 
 
-    public int getIdDueno() {
+
+    public int getIdduenos() {
         return idduenos;
     }
 
-    public void setIdDueno(int iddueno) {
+    public void setIdduenos(int idduenos) {
         this.idduenos = idduenos;
     }
 
-    public String getNommbreDueno() {
+
+    public String getNommbreduenos() {
         return nommbreduenos;
     }
 
-    public void setNommbreDueno(String nommbredueno) {
-        this.nommbreduenos = nommbredueno;
+    public void setNommbreduenos(String nommbreduenos) {
+        this.nommbreduenos = nommbreduenos;
     }
 
     public String getTelefono() {
@@ -53,12 +54,6 @@ public class Dueno {
         this.telefono = telefono;
     }
 
-    public void setIdmascotas(int idmascotas) {
-        this.idmascota = idmascotas;
-    }
 
-    public int getIdmascotas() {
-        return idmascota;
-    }
 
 }
