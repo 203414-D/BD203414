@@ -5,17 +5,18 @@ import com.DiegoChacon.MascotaServicio.Model.Dueno;
 import com.DiegoChacon.MascotaServicio.Model.Mascota;
 import com.DiegoChacon.MascotaServicio.Repository.MascotaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
+
 
 @RestController
 public class MascotaController {
+
+
     @Autowired
     MascotaRepository mascotaRepository;
     @Autowired
@@ -29,6 +30,7 @@ public class MascotaController {
     public Mascota addMascota(@RequestBody Mascota mascota){
         return mascotaRepository.save(mascota);
     }
+
     @GetMapping (value = "/mascota/{idmascota}")
     public Mascota getidmascota(@PathVariable ("idmascota") int idmascota){
         Mascota mascota= mascotaRepository.findByidmascota(idmascota);
@@ -56,6 +58,7 @@ public class MascotaController {
         Dueno d = restTemplate.getForObject("http://localhost:8088/dueno/"+idduenos,Dueno.class);
         return d;
     }
+
     @PutMapping (value = "/mas/upd")
     public Mascota updateMascota(@RequestBody Mascota mascota){
         Mascota m = mascotaRepository.findByidmascota(mascota.getIdmascota());

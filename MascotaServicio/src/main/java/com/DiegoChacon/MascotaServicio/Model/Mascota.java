@@ -3,6 +3,7 @@ package com.DiegoChacon.MascotaServicio.Model;
 import javax.persistence.*;
 
 
+
 @Entity
 @Table(name = "mascotas")
 public class Mascota {
