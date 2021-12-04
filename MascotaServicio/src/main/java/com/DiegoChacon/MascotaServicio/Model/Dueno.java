@@ -10,7 +10,7 @@ public class Dueno {
     private int idduenos;
 
     @Column(name = "nombreduenos")
-    private String nommbreduenos;
+    private String nombreduenos;
     @Column(name = "telefono")
     private String telefono;
 
@@ -21,7 +21,7 @@ public class Dueno {
 
     public Dueno(int idduenos, String nombreduenos, String telefono){
         this.idduenos=idduenos;
-        this.nommbreduenos=nombreduenos;
+        this.nombreduenos=nombreduenos;
         this.telefono=telefono;
 
     }
@@ -36,12 +36,13 @@ public class Dueno {
     }
 
 
-    public String getNommbreduenos() {
-        return nommbreduenos;
+
+    public String getNombreduenos() {
+        return nombreduenos;
     }
 
-    public void setNommbreduenos(String nommbreduenos) {
-        this.nommbreduenos = nommbreduenos;
+    public void setNombreduenos(String nombreduenos) {
+        this.nombreduenos = nombreduenos;
     }
 
     public String getTelefono() {

@@ -7,7 +7,8 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface MascotaRepository extends CrudRepository<Mascota, String> {
+public interface MascotaRepository extends CrudRepository<Mascota, Integer> {
+    void delete(Mascota mascota);
     List<Mascota> findAll();
 
     Mascota save(Mascota mascota);

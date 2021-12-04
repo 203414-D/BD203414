@@ -49,6 +49,25 @@ public class DuenoController {
 
         return m;
     }
+    @PutMapping (value = "/dueno/upd")
+    public Dueno updateDueno(@RequestBody Dueno dueno){
+        Dueno dno = duenoRepository.findByidduenos(dueno.getIdduenos());
+        if (dno!=null){
+            if (dno.getTelefono()!=null)
+                dno.setTelefono(dueno.getTelefono());
+            return duenoRepository.save(dno);
+        }
+        return null;
+    }
+    @DeleteMapping(value = "dueno/delete")
+    public boolean deleteDueno(@RequestBody Dueno dueno){
+        Dueno du=duenoRepository.findByidduenos(dueno.getIdduenos());
+        if (du!=null){
+            duenoRepository.delete(du);
+            return true;
+        }
+        return false;
+    }
 
 
 

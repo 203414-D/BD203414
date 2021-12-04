@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class MascotaController {
@@ -55,10 +56,25 @@ public class MascotaController {
         Dueno d = restTemplate.getForObject("http://localhost:8088/dueno/"+idduenos,Dueno.class);
         return d;
     }
-
-
-
-
+    @PutMapping (value = "/mas/upd")
+    public Mascota updateMascota(@RequestBody Mascota mascota){
+        Mascota m = mascotaRepository.findByidmascota(mascota.getIdmascota());
+        if (m!=null){
+            if (m.getMedicamentomas()!=null)
+                m.setMedicamentomas(mascota.getMedicamentomas());
+            return mascotaRepository.save(m);
+        }
+        return null;
+    }
+    @DeleteMapping(value = "mas/delete")
+    public boolean deleteMascota(@RequestBody Mascota mascota){
+        Mascota ma=mascotaRepository.findByidmascota(mascota.getIdmascota());
+        if (ma!=null){
+        mascotaRepository.delete(ma);
+        return true;
+        }
+    return false;
+}
 
    // @Autowired
    // RestTemplate restTemplate;
