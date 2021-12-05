@@ -1,16 +1,14 @@
-package com.DiegoChacon.MascotaServicio.Model;
+package MauricioDominguez.MedicamentoServicio.Model;
 
 import javax.persistence.*;
 
-
-
 @Entity
-@Table(name = "mascotas")
+
 public class Mascota {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int idmascotas;
 
     @Column(name = "nombremascota")
@@ -36,12 +34,12 @@ public class Mascota {
         this.iddueno=iddueno;
     }
 
-    public int getIdmascota() {
-        return idmascotas;
+    public void setIdmascotas(int idmascotas) {
+        this.idmascotas = idmascotas;
     }
 
-    public void setIdmascota(int idmascota) {
-        this.idmascotas = idmascota;
+    public int getIdmascotas() {
+        return idmascotas;
     }
 
     public String getNombremascota() {

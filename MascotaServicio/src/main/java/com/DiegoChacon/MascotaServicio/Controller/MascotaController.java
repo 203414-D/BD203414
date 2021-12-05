@@ -31,16 +31,17 @@ public class MascotaController {
         return mascotaRepository.save(mascota);
     }
 
-    @GetMapping (value = "/mascota/{idmascota}")
-    public Mascota getidmascota(@PathVariable ("idmascota") int idmascota){
-        Mascota mascota= mascotaRepository.findByidmascota(idmascota);
+    @GetMapping (value = "/mascota/{idmascotas}")
+    public Mascota getidmascota(@PathVariable ("idmascotas") int idmascotas){
+        Mascota mascota= mascotaRepository.findByidmascotas(idmascotas);
         return mascota;
     }
-    @GetMapping(value = "/masco/{medicamentomas}")
-    public List<Mascota> getmedicamentomas(@PathVariable("medicamentomas") String medicamentomas){
-        return mascotaRepository.findBymedicamentomas(medicamentomas);
 
+    @GetMapping(value = "/masmedi/{idmedicamento}")
+    public List<Mascota> getidmedicamento(@PathVariable("idmedicamento") int idmedicamento){
+        return mascotaRepository.findByidmedicamento(idmedicamento);
     }
+
     @GetMapping(value = "/mas/{iddueno}")
     public List<Mascota> getiddueno(@PathVariable("iddueno") int iddueno){
         return mascotaRepository.findByiddueno(iddueno);
@@ -61,17 +62,18 @@ public class MascotaController {
 
     @PutMapping (value = "/mas/upd")
     public Mascota updateMascota(@RequestBody Mascota mascota){
-        Mascota m = mascotaRepository.findByidmascota(mascota.getIdmascota());
+        Mascota m = mascotaRepository.findByidmascotas(mascota.getIdmascota());
         if (m!=null){
-            if (m.getMedicamentomas()!=null)
-                m.setMedicamentomas(mascota.getMedicamentomas());
+            if (m.getIdmedicamento() > 0)
+                m.setIdmedicamento(mascota.getIdmedicamento());
             return mascotaRepository.save(m);
         }
         return null;
     }
+
     @DeleteMapping(value = "mas/delete")
     public boolean deleteMascota(@RequestBody Mascota mascota){
-        Mascota ma=mascotaRepository.findByidmascota(mascota.getIdmascota());
+        Mascota ma=mascotaRepository.findByidmascotas(mascota.getIdmascota());
         if (ma!=null){
         mascotaRepository.delete(ma);
         return true;

@@ -15,16 +15,19 @@ public class Dueno {
     @Column(name = "telefono")
     private String telefono;
 
+    @Column(name = "direccion")
+    private String direccion;
+
 
     public Dueno(){
 
     }
 
-    public Dueno(int idduenos, String nombreduenos, String telefono){
+    public Dueno(int idduenos, String nombreduenos, String telefono, String direccion){
         this.idduenos=idduenos;
         this.nombreduenos=nombreduenos;
         this.telefono=telefono;
-
+        this.direccion = direccion;
     }
 
 
@@ -52,6 +55,14 @@ public class Dueno {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
 

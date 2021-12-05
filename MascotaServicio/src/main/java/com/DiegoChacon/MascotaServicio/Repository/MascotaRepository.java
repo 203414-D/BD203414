@@ -14,15 +14,14 @@ public interface MascotaRepository extends CrudRepository<Mascota, Integer> {
 
     Mascota save(Mascota mascota);
 
-    Mascota findByidmascota(int idmascota);
-
+    Mascota findByidmascotas(int idmascotas);
 
 
     @Query(
-            value = "SELECT * FROM mascotas WHERE medicamentomas =:medicamentomas",
+            value = "SELECT * FROM mascotas WHERE idmedicamento =:idmedicamento",
             nativeQuery = true
     )
-    List<Mascota> findBymedicamentomas(@Param("medicamentomas") String medicamentomas);
+    List<Mascota> findByidmedicamento(@Param("idmedicamento") int idmedicamento);
 
     @Query(
             value = "SELECT * FROM mascotas WHERE iddueno=:iddueno",

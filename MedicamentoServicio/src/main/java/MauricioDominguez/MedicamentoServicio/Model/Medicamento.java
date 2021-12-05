@@ -11,7 +11,7 @@ public class Medicamento {
     private int id;
 
     @Column(name = "codigo")
-    private int codigo;
+    private String codigo;
 
     @Column(name = "nombre")
     private String nombre;
@@ -20,7 +20,7 @@ public class Medicamento {
 
     }
 
-    public Medicamento(int id, int codigo, String nombre){
+    public Medicamento(int id, String codigo, String nombre){
         this.id=id;
         this.codigo=codigo;
         this.nombre=nombre;
@@ -34,11 +34,11 @@ public class Medicamento {
         this.id = id;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

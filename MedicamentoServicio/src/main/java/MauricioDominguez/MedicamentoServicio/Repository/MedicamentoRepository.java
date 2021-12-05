@@ -8,4 +8,8 @@ import java.util.List;
 public interface MedicamentoRepository extends CrudRepository<Medicamento, String> {
     List<Medicamento> findAll();
     Medicamento save(Medicamento medicamentos);
+    Medicamento findByid (int id);
+    void delete(Medicamento medicamento);
+
 }
+
