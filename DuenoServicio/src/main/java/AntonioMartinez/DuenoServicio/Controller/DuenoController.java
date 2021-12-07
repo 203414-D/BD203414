@@ -18,10 +18,12 @@ public class DuenoController {
     @Autowired
     RestTemplate restTemplate;
 
+    @CrossOrigin
     @GetMapping(value = "/listaDueno")
     public List<Dueno> getListDueno(){
         return duenoRepository.findAll();
     }
+    @CrossOrigin
     @PostMapping(value = "/dueno/new")
     public Dueno addDueno(@RequestBody Dueno dueno){
         return duenoRepository.save(dueno);
@@ -59,7 +61,7 @@ public class DuenoController {
         }
         return null;
     }
-    @DeleteMapping(value = "dueno/delete")
+    @DeleteMapping(value = "/dueno/delete")
     public boolean deleteDueno(@RequestBody Dueno dueno){
         Dueno du=duenoRepository.findByidduenos(dueno.getIdduenos());
         if (du!=null){

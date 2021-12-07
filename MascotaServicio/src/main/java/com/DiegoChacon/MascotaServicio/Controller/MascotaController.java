@@ -22,18 +22,20 @@ public class MascotaController {
     @Autowired
     RestTemplate restTemplate;
 
+    @CrossOrigin
     @GetMapping(value = "/listaMascota")
     public List<Mascota> getListMascota(){
         return mascotaRepository.findAll();
     }
+    @CrossOrigin
     @PostMapping(value = "/mascota/new")
     public Mascota addMascota(@RequestBody Mascota mascota){
         return mascotaRepository.save(mascota);
     }
 
-    @GetMapping (value = "/mascota/{idmascotas}")
-    public Mascota getidmascota(@PathVariable ("idmascotas") int idmascotas){
-        Mascota mascota= mascotaRepository.findByidmascotas(idmascotas);
+    @GetMapping (value = "/mascota/{idmascota}")
+    public Mascota getidmascota(@PathVariable ("idmascotas") int idmascota){
+        Mascota mascota= mascotaRepository.findByidmascota(idmascota);
         return mascota;
     }
 
@@ -62,7 +64,7 @@ public class MascotaController {
 
     @PutMapping (value = "/mas/upd")
     public Mascota updateMascota(@RequestBody Mascota mascota){
-        Mascota m = mascotaRepository.findByidmascotas(mascota.getIdmascota());
+        Mascota m = mascotaRepository.findByidmascota(mascota.getIdmascota());
         if (m!=null){
             if (m.getIdmedicamento() > 0)
                 m.setIdmedicamento(mascota.getIdmedicamento());
@@ -71,9 +73,9 @@ public class MascotaController {
         return null;
     }
 
-    @DeleteMapping(value = "mas/delete")
+    @DeleteMapping(value = "/mas/delete")
     public boolean deleteMascota(@RequestBody Mascota mascota){
-        Mascota ma=mascotaRepository.findByidmascotas(mascota.getIdmascota());
+        Mascota ma=mascotaRepository.findByidmascota(mascota.getIdmascota());
         if (ma!=null){
         mascotaRepository.delete(ma);
         return true;

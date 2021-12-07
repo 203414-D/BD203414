@@ -14,7 +14,7 @@ public interface MascotaRepository extends CrudRepository<Mascota, Integer> {
 
     Mascota save(Mascota mascota);
 
-    Mascota findByidmascotas(int idmascotas);
+    Mascota findByidmascota(int idmascota);
 
 
     @Query(

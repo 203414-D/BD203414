@@ -18,11 +18,12 @@ public class MedicamentoController {
     @Autowired
     RestTemplate restTemplate;
 
+    @CrossOrigin
     @GetMapping(value = "/listaMedicamentos")
     public List<Medicamento> getListMedicamento() {
         return medicamentoRepository.findAll();
     }
-
+    @CrossOrigin
     @PostMapping(value = "/Medicamentos/new")
     public Medicamento addMedicamentos(@RequestBody Medicamento medicamentos) {
         return medicamentoRepository.save(medicamentos);

@@ -11,7 +11,7 @@ public class Mascota {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idmascotas;
+    private int idmascota;
 
     @Column(name = "nombremascota")
     private String nombremascota;
@@ -28,8 +28,8 @@ public class Mascota {
     public Mascota(){
 
     }
-    public Mascota(int idmascotas, String nombremascota, String tipomascota, int idmedicamento, int iddueno){
-        this.idmascotas=idmascotas;
+    public Mascota(int idmascota, String nombremascota, String tipomascota, int idmedicamento, int iddueno){
+        this.idmascota=idmascota;
         this.nombremascota=nombremascota;
         this.tipomascota=tipomascota;
         this.idmedicamento=idmedicamento;
@@ -37,11 +37,11 @@ public class Mascota {
     }
 
     public int getIdmascota() {
-        return idmascotas;
+        return idmascota;
     }
 
     public void setIdmascota(int idmascota) {
-        this.idmascotas = idmascota;
+        this.idmascota = idmascota;
     }
 
     public String getNombremascota() {
