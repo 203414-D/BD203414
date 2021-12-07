@@ -1,0 +1,11 @@
+CREATE DATABASE `bd203414` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
+
+
+CREATE TABLE `mascotas` (
+  `idmascota` int NOT NULL AUTO_INCREMENT,
+  `nombremascota` varchar(50) NOT NULL,
+  `tipomascota` varchar(50) NOT NULL,
+  `idmedicamento` int NOT NULL,
+  `iddueno` int NOT NULL,
+  PRIMARY KEY (`idmascota`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

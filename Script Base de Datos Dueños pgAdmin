@@ -1,0 +1,30 @@
+-- Database: 203414
+
+-- DROP DATABASE "203414";
+
+CREATE DATABASE "203414"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Mexico.1252'
+    LC_CTYPE = 'Spanish_Mexico.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+    -- Table: public.duenos
+
+    -- DROP TABLE public.duenos;
+
+    CREATE TABLE IF NOT EXISTS public.duenos
+    (
+        idduenos integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 243125 CACHE 1 ),
+        nombreduenos character varying(50) COLLATE pg_catalog."default" NOT NULL,
+        telefono character varying(50) COLLATE pg_catalog."default" NOT NULL,
+        direccion character varying(50) COLLATE pg_catalog."default" NOT NULL,
+        CONSTRAINT duenos_pkey PRIMARY KEY (idduenos)
+    )
+
+    TABLESPACE pg_default;
+
+    ALTER TABLE public.duenos
+        OWNER to postgres;
