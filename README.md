@@ -16,8 +16,5 @@ el manejador a utilizar esta especificado en el archivo application properties d
 
 3-se deben cambiar las credenciales de acceso a cada manejador en el archivo application properties (nombre de usuario, contraseña, nombre de base de datos)
 
-# para correr la interfaz
-1- se necesita instalar las siguientes librerias: '@material-ui/core'
 
-2- se necesita que las apis esten corriendo para poder utilizar los metodos get y post
 
