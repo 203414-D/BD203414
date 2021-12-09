@@ -33,7 +33,7 @@ const Mascotas= () => {
     const [consolaSeleccionadaMascotas, setConsolaSeleccionadaMascotas] = useState({
         nombremascota: '',
         tipomascota: '',
-        idmedicamentomas: '',
+        idmedicamento: '',
         iddueno: ''
     })
     const handleChangeMascotas = e => {
@@ -95,7 +95,7 @@ const Mascotas= () => {
             <br />
             <TextField name="tipomascota"  className={styles.inputMaterial} label="Tipo mascota" onChange={handleChangeMascotas} />
             <br />
-            <TextField name="idmedicamentomas" className={styles.inputMaterial} label="Id Medicamentos" onChange={handleChangeMascotas} />
+            <TextField name="idmedicamento" className={styles.inputMaterial} label="Id Medicamentos" onChange={handleChangeMascotas} />
             <br />
             <TextField name="iddueno" className={styles.inputMaterial} label="Id Dueño" onChange={handleChangeMascotas} />
             <br />
@@ -135,7 +135,7 @@ const Mascotas= () => {
                                 <TableCell>{mascotas.idmascota}</TableCell>
                                 <TableCell>{mascotas.nombremascota}</TableCell>
                                 <TableCell>{mascotas.tipomascota}</TableCell>
-                                <TableCell>{mascotas.idmedicamentomas}</TableCell>
+                                <TableCell>{mascotas.idmedicamento}</TableCell>
                                 <TableCell>{mascotas.iddueno}</TableCell>
                                 <TableCell>
                                     <Edit className={styles.iconos}/>
